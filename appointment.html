@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment | CareConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+<div class="form-container">
+    <h2>Book Appointment</h2>
+
+    <form onsubmit="return bookAppointment()">
+        <input type="text" id="patientName" placeholder="Patient Name" required>
+
+        <select id="doctor">
+            <option>Dr. Sharma – General Physician</option>
+            <option>Dr. Khan – Dentist</option>
+            <option>Dr. Mehta – Cardiologist</option>
+            <option>Dr. Rao – Orthopedic Surgeon</option>
+            <option>Dr. Patel – Pediatrician</option>
+            <option>Dr. Verma – Dermatologist</option>
+            <option>Dr. Iyer – Neurologist</option>
+            <option>Dr. Singh – ENT Specialist</option>
+            <option>Dr. Das – Gynecologist</option>
+            <option>Dr. Banerjee – Psychiatrist</option>
+            <option>Dr. Choudhary – Diabetologist</option>
+        </select>
+
+        <input type="date" id="date" required>
+        <input type="time" id="time" required>
+
+        <button type="submit" class="btn-primary">Confirm Booking</button>
+    </form>
+</div>
+
+<div id="bookingPopup" class="popup">
+    <div class="popup-box">
+        <h3>✅ Booking Confirmed</h3>
+        <p>Your appointment has been successfully booked.</p>
+        <button onclick="closeBookingPopup()">OK</button>
+    </div>
+</div>
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

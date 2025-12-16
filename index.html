@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CareConnect | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">CareConnect</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="appointment.html">Book</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" id="loginBtn" class="btn">Login</a>
+        <button id="logoutBtn" class="btn" onclick="logout()" style="display:none;">Logout</button>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Book Doctor Appointments Easily</h1>
+        <p>Find trusted local doctors and book slots instantly</p>
+        <a href="appointment.html" class="btn-primary">Book Appointment</a>
+    </div>
+</section>
+
+<section class="services">
+    <div class="card">
+        <h3>Verified Doctors</h3>
+        <p>Consult certified and experienced doctors</p>
+    </div>
+    <div class="card">
+        <h3>Easy Booking</h3>
+        <p>Select date and time in seconds</p>
+    </div>
+    <div class="card">
+        <h3>Secure Data</h3>
+        <p>Your information is safe with us</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 CareConnect. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<script>
+const user = JSON.parse(localStorage.getItem("careconnect_user"));
+if (user) {
+    document.querySelector(".navbar .btn").textContent = "Logout";
+    document.querySelector(".navbar .btn").onclick = function () {
+        logout();
+    };
+}
+</script>
+
+
+</body>
+</html>
