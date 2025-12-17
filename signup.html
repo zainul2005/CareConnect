@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup | CareConnect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Create Account</h2>
+
+    <form onsubmit="return signupUser()">
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="number" id="age" placeholder="Enter Age" min="1" max="120" required>
+        <input type="password" id="password" placeholder="Password" minlength="6" required>
+
+        <button type="submit" class="btn-primary">Signup</button>
+    </form>
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-box">
+    <h3>🎉 Signup Successful</h3>
+    <p>Your account has been created</p>
+    <button onclick="goToLogin()">Go to Login</button>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
