@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | CareConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="form-container">
+    <h2>Contact Us</h2>
+    <form onsubmit="return sendMessage()">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+</div>
+<div id="contactPopup" class="popup">
+    <div class="popup-box">
+        <h3>✅ Message Sent</h3>
+        <p>Thank you for contacting us. We’ll get back to you soon.</p>
+        <button onclick="closeContactPopup()">OK</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
